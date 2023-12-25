@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Black+Ops+One&family=IBM+Plex+Sans:wght@700&family=Kanit:wght@700&family=Lexend+Deca&family=Montserrat:wght@300;400;500;800&family=Open+Sans:wght@300;500;600;700;800&family=Oswald:wght@700&family=Poppins:wght@700&family=Roboto+Condensed&family=Roboto:wght@500;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  position: relative;
+}
+.container {
+  content: "";
+  height: 0; /* Set the initial height to the height of the button */
+  width: 50vw;
+  border: solid 13px pink;
+  background-color: rgb(248, 232, 234);
+  position: relative;
+  overflow: hidden;
+  transition: height 1s ease; /* Add a smooth transition effect */
+}
+.container.expanded {
+  height: 90vh; /* Set the expanded height */
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: pink;
+  border: solid 5px white;
+  height: 70px;
+  width: 70px;
+  position: absolute;
+  left: 48%;
+  top: 0;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+button {
+  position: absolute;
+  bottom: 15px;
+  left: 45%;
+  height: 50px;
+  width: 150px;
+  background-color: pink;
+  border: solid 5px white;
+  font-family: Poppins;
+  z-index: 2; /* Ensure the button is above the expanding content */
+}
+.letter {
+  margin-top: 30px;
+  height: 100%;
+  font-size: 18px;
+  font-family: Poppins;
+}
+
+.gif {
+  top: 50px;
+  left: 42%;
+  width: 50vw;
+  position: absolute;
+}
+img {
+  height: 300px;
+}
+@media only screen and (max-width: 477px) {
+  .container {
+    width: 80vw;
+  }
+  .icon {
+    left: 43%;
+  }
+  .letter {
+    font-size: 13px;
+    text-align: center;
+  }
+  button {
+    left: 30%;
+  }
+  .gif {
+    top: 70px;
+    left: 21%;
+    width: 40vw;
+    position: absolute;
+  }
+}
